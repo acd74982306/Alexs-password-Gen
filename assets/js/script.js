@@ -38,10 +38,10 @@ function generatePassword() {
   // Initialize as empty array to start fresh each time function is called
   var selectedCriteriaList = [];
   // Add user selected criteria to full criteria list
-  if (includeLower) { selectedCriteriaList = selectedCriteriaList.concat(lowerList); }
-  if (includeUpper) { selectedCriteriaList = selectedCriteriaList.concat(upperList); }
-  if (includeNumber) { selectedCriteriaList = selectedCriteriaList.concat(numberList); }
-  if (includeSymbol) { selectedCriteriaList = selectedCriteriaList.concat(symbolList); }
+  if (includeLower) { selectedCriteriaList.push(lowerList); }
+  if (includeUpper) { selectedCriteriaList.push(upperList); }
+  if (includeNumber) { selectedCriteriaList.push(numberList); }
+  if (includeSymbol) { selectedCriteriaList.push(symbolList); }
 
   // for (var i=0; i < selectedCriteriaList.length;i++){
   //   console.log(selectedCriteriaList[i]);
