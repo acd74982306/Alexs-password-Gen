@@ -1,6 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function generateRandomInt(ceil) {
+  var rand = Math.random() * ceil;
+  rand = Math.floor(rand);
+  return rand;
+}
+
 function generatePassword() {
 
   var userInput = window.prompt("Choose password length between 8 & 128 characters");
@@ -24,7 +30,7 @@ function generatePassword() {
   var includeSymbol = window.confirm("Include symbols?");
 
   // Verify user has selected at least one char set
-  if (!includeLower && !includeUpper && !includeNumbers && !includeSymbols) {
+  if (!includeLower && !includeUpper && !includeNumber && !includeSymbol) {
     window.alert("At least one character set is required!");
     return;
   }
@@ -43,9 +49,13 @@ function generatePassword() {
   if (includeNumber) { selectedCriteriaList = selectedCriteriaList.concat(numberList); }
   if (includeSymbol) { selectedCriteriaList = selectedCriteriaList.concat(symbolList); }
 
-  for (var i=0; i<selectedCriteriaList.length;i++){
-    console.log(selectedCriteriaList[i]);
+  // Create generatedPassword from selected criteria and length
+  var generatedPassword = '';
+  // Generate password chars until set password length is reached
+  for (var i = 0; i < passwordLength; i++) {
+    generatedPassword = generatedPassword.concat(selectedCriteriaList[generateRandomInt(selectedCriteriaList.length)]);
   }
+  console.log(generatedPassword);
 
 }
 
