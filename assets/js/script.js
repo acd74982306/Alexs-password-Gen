@@ -49,7 +49,7 @@ function generatePassword() {
   if (includeNumber) { selectedCriteriaList = selectedCriteriaList.concat(numberList); }
   if (includeSymbol) { selectedCriteriaList = selectedCriteriaList.concat(symbolList); }
 
-  // Create generatedPassword from selected criteria and length
+  // Initialize as empty string to fill with chars
   var newPassword = '';
   // Randomly generate password chars until set password length is reached
   for (var i = 0; i < passwordLength; i++) {
