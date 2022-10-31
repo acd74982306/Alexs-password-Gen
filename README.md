@@ -15,15 +15,16 @@ A web application to randomly generate a strong password that meets parameters s
 
 ### Webpage
 Screenshot preview:
+![passGen-Screenshot](https://user-images.githubusercontent.com/114900371/198920964-e00f648e-3815-4b59-bd22-a99c5122bb8f.png)
 
 Github page:
+https://acd74982306.github.io/Alexs-password-Gen/
 
 Github repo:
+https://github.com/acd74982306/Alexs-password-Gen
 
 ## Author
 Alexander Davis
 
 ## License
 MIT License
-
-## Acknowledgements
