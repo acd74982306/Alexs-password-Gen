@@ -50,13 +50,13 @@ function generatePassword() {
   if (includeSymbol) { selectedCriteriaList = selectedCriteriaList.concat(symbolList); }
 
   // Create generatedPassword from selected criteria and length
-  var generatedPassword = '';
-  // Generate password chars until set password length is reached
+  var newPassword = '';
+  // Randomly generate password chars until set password length is reached
   for (var i = 0; i < passwordLength; i++) {
-    generatedPassword = generatedPassword.concat(selectedCriteriaList[generateRandomInt(selectedCriteriaList.length)]);
+    newPassword = newPassword.concat(selectedCriteriaList[generateRandomInt(selectedCriteriaList.length)]);
   }
-  console.log(generatedPassword);
 
+  return newPassword;
 }
 
 // Write password to the #password input
